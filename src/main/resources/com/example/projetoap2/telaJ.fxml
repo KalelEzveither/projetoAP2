@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetoap2.TelaJController">
+   <children>
+      <Pane layoutX="-3.0" prefHeight="400.0" prefWidth="606.0" style="-fx-background-color: #FFFACD;" styleClass="background">
+         <children>
+            <Text fill="DARKOLIVEGREEN" layoutX="228.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consultar Vendas">
+               <font>
+                  <Font name="Franklin Gothic Demi Cond" size="25.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="21.0" layoutY="-18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/2.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="tabelaVendas" layoutX="1.0" layoutY="124.0" prefHeight="276.0" prefWidth="606.0">
+              <columns>
+                <TableColumn fx:id="colunaCliente" prefWidth="351.0" text="Cliente" />
+                <TableColumn fx:id="colunaNumeroNota" prefWidth="158.0" text="Número da nota" />
+                  <TableColumn fx:id="colunaValorNota" prefWidth="95.0" text="Valor da nota" />
+              </columns>
+            </TableView>
+            <TextField fx:id="tfPesquisar" layoutX="9.0" layoutY="90.0" prefHeight="25.0" prefWidth="392.0" promptText="digite os dados do cliente" />
+            <Button fx:id="buttonPesquisar" layoutX="419.0" layoutY="90.0" mnemonicParsing="false" onAction="#pesquisar" text="Pesquisar" />
+            <Button fx:id="buttonVoltar" layoutX="531.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltar" text="Voltar" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
